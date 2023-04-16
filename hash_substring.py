@@ -16,7 +16,7 @@ def read_input():
     return pattern, text
 
 def print_occurrences(output):
-    # This function prints the outpuit and does not require any return statement.
+    # This function prints the output and does not require any return statement.
     print(' '.join(map(str, output)))
 
 def get_occurrences(pattern, text):
@@ -26,7 +26,7 @@ def get_occurrences(pattern, text):
     result = []
 
     for i in range(t - p + 1):
-        if pattern == text[i:i+p]
+        if pattern == text[i:i+p]:
             result.append(i)
 
     return result
