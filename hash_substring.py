@@ -4,7 +4,7 @@ def read_input():
     # This function allows the user to provide input from the keyboard or a file.
     # The capital letter "I" or "F" is used to indicate which input type will follow.
     input_type = input().rstrip()
-    file = "tests/06"
+    file = "./tests/06"
     if input_type == "I":
         pattern = input().rstrip()
         text = input().rstrip()
