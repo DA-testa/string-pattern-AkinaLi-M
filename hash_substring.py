@@ -7,7 +7,7 @@ def read_input():
         pattern = input().rstrip()
         text = input().rstrip()
     elif input_tipe == "F"
-        with open(f"test") as f:
+        with open(f"tests/06") as f:
             pattern = f.readLine().rstrip()
             text = f.readLine().rstrip()
     
