@@ -8,7 +8,7 @@ def read_input():
         pattern = input().rstrip()
         text = input().rstrip()
     elif input_type == "F":
-        with open(f"tests/06") as f:
+        with open(f"test") as f:
             pattern = f.readLine().rstrip()
             text = f.readLine().rstrip()
     
@@ -21,12 +21,12 @@ def print_occurrences(output):
 
 def get_occurrences(pattern, text):
     # This function uses the Rabin Karp algorithm to find the occurrences.
-    p = len(pattern)
-    t = len(text)
+    pt = len(pattern)
+    tx = len(text)
     result = []
 
-    for i in range(t - p + 1):
-        if pattern == text[i:i+p]:
+    for i in range(tx - pt + 1):
+        if pattern == text[i:i+pt]:
             result.append(i)
 
     return result
