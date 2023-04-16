@@ -1,43 +1,34 @@
 # Veronika Musijaka 221RDB124 13.gr
 
 def read_input():
+    # This function allows the user to provide input from the keyboard or a file.
+    # The capital letter "I" or "F" is used to indicate which input type will follow.
     if input_type == "I":
-        pattern = input().strip()
-        text = input().strip()
+        pattern = input().rstrip()
+        text = input().rstrip()
     elif input_tipe == "F"
-        file_name == input().strip()
-        with open(file_name, 'r') as f:
-            pattern = f.readLine().strip()
-            text = f.readLine().strip()
+        with open(f"test") as f:
+            pattern = f.readLine().rstrip()
+            text = f.readLine().rstrip()
     
-    return (pattern, text)
+    # Return both lines in one return statement, with the rstrip function to remove any trailing white space.
+    return pattern, text
 
 def print_occurrences(output):
+    # This function prints the outpuit and does not require any return statement.
     print(' '.join(map(str, output)))
 
 def get_occurrences(pattern, text):
-    occurrences = []
-    p = 10**9+7
-    x = 263
+    # This function uses the Rabin Karp algorithm to find the occurrences.
+    p = len(pattern)
+    t = len(text)
+    result = []
 
-    pattern_hash = 0
-    text_hash = 0
-    x_len_pattern = 1
+    for i in range(t - p + 1):
+        if pattern == text[i:i+p]
+            result.append(i)
 
-    for i in range(len(pattern)):
-        pattern_hash = (pattern_hash*x + ord(pattern[i]))%p
-        text_hash = (text_hash*x + ord(text[i]))%p
-        x_len_pattern = (x_len_pattern*x)%p
-    
-    for i in range(len(text)-len(pattern)+1):
-        if pattern_hash == text_hash:
-            if pattern == text[i:i+len(pattern):]
-                occurrences.append(i)
-        if i < len(text)-len(pattern):
-            text_hash = (text_hash - ord(text[i])*x_len_pattern)%p
-            text_hash = (text_hash*x - ord(text[i+len(ppattern)]))%p
-
-    return occurrences
+    return result
 
 
 # this part launches the functions
